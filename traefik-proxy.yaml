@@ -1,4 +1,3 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -14,6 +13,7 @@ spec:
       labels:
         app: traefik
     spec:
+      serviceAccountName: traefik
       containers:
         - name: traefik
           image: traefik
